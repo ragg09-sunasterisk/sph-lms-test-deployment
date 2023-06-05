@@ -30,7 +30,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   return (
     <div className="flex flex-row">
       <button
-        className={`font-semibold rounded disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none ${textColor} ${color} ${hover} ${width} ${buttonClass}`}
+        className={`font-semibold rounded disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none disabled:cursor-not-allowed ${textColor} ${color} ${hover} ${width} ${buttonClass}`}
         onClick={onClick}
         type={type}
         disabled={disabled}
@@ -49,6 +49,7 @@ Button.defaultProps = {
   type: 'button',
   hover: '',
   buttonClass: '',
+  disabled: false,
 };
 
 export default Button;

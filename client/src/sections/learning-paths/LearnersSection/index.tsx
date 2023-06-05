@@ -7,6 +7,7 @@ import SortDropdown, {
   type SortOption,
 } from '@/src/shared/components/Dropdown/SortDropdown/SortDropdown';
 import ArrowIcon from '@/src/shared/icons/ArrowIcon';
+import AddLearnerModal from '../../../shared/components/Modal/AddLearnerModal';
 import Button from '@/src/shared/components/Button';
 
 const LearningPathLearnersSection: React.FC = () => {
@@ -30,12 +31,23 @@ const LearningPathLearnersSection: React.FC = () => {
     { id: 17, progress: 85, firstname: 'Vali2', lastname: 'Ruziboev' },
     { id: 18, progress: 57, firstname: 'Francis2', lastname: 'Delos Santos' },
     { id: 19, progress: 23, firstname: 'Elyric2', lastname: 'Manatad' },
+    { id: 20, progress: 85, firstname: 'Alice', lastname: 'Smith' },
+    { id: 22, progress: 63, firstname: 'Bob', lastname: 'Johnson' },
+    { id: 23, progress: 92, firstname: 'Charlie', lastname: 'Davis' },
+    { id: 24, progress: 76, firstname: 'Ella', lastname: 'Brown' },
+    { id: 25, progress: 45, firstname: 'Frank', lastname: 'Miller' },
+    { id: 26, progress: 67, firstname: 'Grace', lastname: 'Wilson' },
+    { id: 27, progress: 54, firstname: 'Henry', lastname: 'Anderson' },
+    { id: 28, progress: 80, firstname: 'Isabella', lastname: 'Lee' },
   ];
 
   const [, setSelectedSortOption] = useState('');
   const [visibleLearners, setVisibleLearners] = useState(6);
   const learnersToShow = staticLearners.slice(0, visibleLearners);
   const isShowMoreDisabled = visibleLearners >= staticLearners.length;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  document.body.style.overflow = isModalOpen ? 'hidden' : 'auto';
 
   const sortOptions: SortOption[] = [
     { label: 'A - Z', value: 'A - Z' },
@@ -61,6 +73,14 @@ const LearningPathLearnersSection: React.FC = () => {
     setVisibleLearners(newVisibleLearners);
   };
 
+  const handleShowModal = (): void => {
+    setIsModalOpen(true);
+  };
+
+  const handleHideModal = (): void => {
+    setIsModalOpen(false);
+  };
+
   return (
     <Fragment>
       <div>
@@ -71,9 +91,7 @@ const LearningPathLearnersSection: React.FC = () => {
               text="Add learner"
               buttonClass="px-4 py-2 text-sm bg-white text-blue-500 border-2 border-red"
               textColor="text-red"
-              onClick={() => {
-                alert('Showing Add Learner Modal');
-              }}
+              onClick={handleShowModal}
             />
           </div>
         </div>
@@ -91,7 +109,7 @@ const LearningPathLearnersSection: React.FC = () => {
               />
             </div>
 
-            <div className={'transition-all duration-500'}>
+            <div className={'px-4 transition-all duration-500'}>
               {learnersToShow?.map((col: any) => (
                 <div className="grid gap-1 w-full py-2" key={col.id}>
                   <ProgressPercentage progress={col.progress} />
@@ -119,6 +137,10 @@ const LearningPathLearnersSection: React.FC = () => {
           <div className="flex items-center justify-center h-full w-full">
             <h1 className="text-center font-semibold text-xl">No Learners Available</h1>
           </div>
+        )}
+        {/* THE MODAL */}
+        {isModalOpen && (
+          <AddLearnerModal learners={staticLearners} handleHideModal={handleHideModal} />
         )}
       </div>
     </Fragment>

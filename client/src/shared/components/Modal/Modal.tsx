@@ -6,7 +6,7 @@ const Modal: React.FC<ModalProps> = ({ children, isOpen, className = '' }: Modal
 
   return (
     <Fragment>
-      <div className="fixed inset-0 z-50 overflow-auto flex items-center justify-center w-screen h-screen bg-black bg-opacity-50">
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
         <div className={`bg-white rounded-lg ${className}`}>
           <div className="max-h-auto">{children}</div>
         </div>

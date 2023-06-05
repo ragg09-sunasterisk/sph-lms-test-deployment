@@ -3,7 +3,7 @@ import Tabs from '@/src/shared/components/Tabs';
 import Tab from '@/src/shared/components/Tabs/Tab';
 import Container from '@/src/shared/layouts/Container';
 import { Fragment } from 'react';
-import LearningPathLearnersSection from '@/src/sections/learning-paths/learningPathLearners';
+import LearningPathLearnersSection from '@/src/sections/learning-paths/LearnersSection';
 
 interface LearningPath {
   id: number;
