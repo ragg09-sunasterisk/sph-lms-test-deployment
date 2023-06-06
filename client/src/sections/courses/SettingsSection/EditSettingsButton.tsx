@@ -1,8 +1,8 @@
 /* eslint-disable multiline-ternary */
-import { useAppDispatch, useAppSelector } from '@/app/hooks';
-import { changeEditMode, reset as courseReset } from '@/features/course/courseSlice';
-import { setIsTabValid } from '@/features/tab/tabSlice';
-import { useGetCourseQuery } from '@/services/courseAPI';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
+import { changeEditMode, reset as courseReset } from '@/src/features/course/courseSlice';
+import { setIsTabValid } from '@/src/features/tab/tabSlice';
+import { useGetCourseQuery } from '@/src/services/courseAPI';
 import Button from '@/src/shared/components/Button';
 import { courseSchema } from '@/src/shared/utils/validationSchemas';
 import { yupResolver } from '@hookform/resolvers/yup';

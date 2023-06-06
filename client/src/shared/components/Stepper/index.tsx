@@ -3,8 +3,8 @@ import type { StepProps } from './Step';
 import type { ChildElementObject } from '../../utils';
 import Button from '../Button';
 import ProgressBar from '../ProgressBar';
-import { useAppDispatch, useAppSelector } from '@/app/hooks';
-import { reset, setActiveStep } from '@/features/stepper/stepperSlice';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
+import { reset, setActiveStep } from '@/src/features/stepper/stepperSlice';
 
 interface StepperProps {
   title: string;

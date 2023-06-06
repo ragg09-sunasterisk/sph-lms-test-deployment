@@ -6,7 +6,7 @@ import Pagination from '@/src/shared/components/Pagination';
 import SearchBar from '@/src/shared/components/SearchBar/SearchBar';
 import CloseIcon from '@/src/shared/icons/CloseIcon';
 import { useRouter } from 'next/router';
-import { useEnrollLearnerMutation, useGetLearnerQuery } from '@/services/traineeAPI';
+import { useEnrollLearnerMutation, useGetLearnerQuery } from '@/src/services/traineeAPI';
 import { alertError, alertSuccess } from '@/src/shared/utils';
 
 interface AddLearnerModalProps {

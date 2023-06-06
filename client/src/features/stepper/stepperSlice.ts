@@ -1,3 +1,4 @@
+/* eslint-disable no-return-assign */
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
@@ -22,7 +23,7 @@ export const stepperSlice = createSlice({
       state.isStepValid = action.payload;
     },
     reset: (state) => {
-      return state = initialState;
+      return (state = initialState);
     },
   },
 });

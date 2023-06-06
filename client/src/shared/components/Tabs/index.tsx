@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/consistent-indexed-object-style */
-import { useAppDispatch, useAppSelector } from '@/app/hooks';
-import { setActiveTab } from '@/features/tab/tabSlice';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
+import { setActiveTab } from '@/src/features/tab/tabSlice';
 import { Children, Fragment, useEffect, useState, type FC, type ReactElement } from 'react';
 import { type ChildElementObject } from '../../utils/interface';
 import { type TabProps } from './Tab';

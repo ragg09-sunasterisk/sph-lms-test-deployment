@@ -8,12 +8,9 @@ import Navbar from '../shared/components/Navbar';
 import { isSignedIn } from '../shared/utils';
 import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
-import { store } from '@/app/store';
+import { store } from '@/src/redux/store';
 
-const App: React.FunctionComponent<AppProps> = ({
-  Component,
-  pageProps
-}: AppProps) => {
+const App: React.FunctionComponent<AppProps> = ({ Component, pageProps }: AppProps) => {
   useAuthMiddleware();
   const [showNavbar, setShowNavbar] = useState(false);
   const { pathname } = useRouter();

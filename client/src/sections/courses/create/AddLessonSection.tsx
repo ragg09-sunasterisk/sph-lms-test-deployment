@@ -3,15 +3,15 @@ import { useEffect, type FC } from 'react';
 import Button from '@/src/shared/components/Button';
 import PlusIcon from '@/src/shared/icons/PlusIcon';
 import LessonModal from './LessonModal';
-import { useAppDispatch, useAppSelector } from '@/app/hooks';
-import { closeModal, lessonModalEnum, openModal } from '@/features/course/lessonModalsSlice';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
+import { closeModal, lessonModalEnum, openModal } from '@/src/features/course/lessonModalsSlice';
 import { type LessonForm } from '@/src/shared/utils';
 import {
   addLesson,
   changeEditMode,
   deleteLesson,
   updateLesson,
-} from '@/features/course/courseSlice';
+} from '@/src/features/course/courseSlice';
 import { v4 as uuidv4 } from 'uuid';
 import DeleteModal from '@/src/shared/components/Modal/DeleteModal';
 import Lessons from './Lessons';

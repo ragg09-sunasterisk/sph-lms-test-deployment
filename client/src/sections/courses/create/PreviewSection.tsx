@@ -1,5 +1,5 @@
-import { useAppDispatch } from '@/app/hooks';
-import { changeEditMode } from '@/features/course/courseSlice';
+import { useAppDispatch } from '@/src/redux/hooks';
+import { changeEditMode } from '@/src/features/course/courseSlice';
 import { Fragment, type FC, useEffect } from 'react';
 import InitialSection from './InitialSection';
 import AddLessonSection from './AddLessonSection';

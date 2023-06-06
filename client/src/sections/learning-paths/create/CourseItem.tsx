@@ -1,5 +1,5 @@
-import { useAppDispatch } from '@/app/hooks';
-import { courseModalEnum, openModal } from '@/features/learning-path/courseModalsSlice';
+import { useAppDispatch } from '@/src/redux/hooks';
+import { courseModalEnum, openModal } from '@/src/features/learning-path/courseModalsSlice';
 import Collapse from '@/src/shared/components/Collapse/Collapse';
 import FourDotsIcon from '@/src/shared/icons/FourDotsIcon';
 import type { Course, Lesson } from '@/src/shared/utils';

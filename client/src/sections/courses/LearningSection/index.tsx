@@ -5,10 +5,10 @@ import ArrowIcon from '@/src/shared/icons/ArrowIcon';
 import AddLearnerModal from './AddLearnerModal';
 import FilterIcon from '@/src/shared/icons/FilterIcon';
 import ProgressPercentage from '@/src/shared/components/ProgressPercentage';
-import { useGetLearnerQuery } from '@/services/traineeAPI';
+import { useGetLearnerQuery } from '@/src/services/traineeAPI';
 import { useRouter } from 'next/router';
-import { useAppDispatch, useAppSelector } from '@/app/hooks';
-import { type Trainee, addTrainees, seeMoreTrainees } from '@/features/course/learnerSlice';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
+import { type Trainee, addTrainees, seeMoreTrainees } from '@/src/features/course/learnerSlice';
 import Button from '@/src/shared/components/Button';
 import Dropdown, { type SortOption } from '@/src/shared/components/Dropdown';
 

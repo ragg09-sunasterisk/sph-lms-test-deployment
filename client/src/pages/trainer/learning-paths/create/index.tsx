@@ -1,5 +1,5 @@
-import { useAppDispatch, useAppSelector } from '@/app/hooks';
-import { setIsStepValid } from '@/features/stepper/stepperSlice';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
+import { setIsStepValid } from '@/src/features/stepper/stepperSlice';
 import AddCourseSection from '@/src/sections/learning-paths/create/AddCourseSection';
 import InitialSection from '@/src/sections/learning-paths/create/InitialSection';
 import PreviewSection from '@/src/sections/learning-paths/create/PreviewSection';

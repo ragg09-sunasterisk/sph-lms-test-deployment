@@ -1,5 +1,5 @@
-import { useAppDispatch, useAppSelector } from '@/app/hooks';
-import { changeEditMode } from '@/features/learning-path/learningPathSlice';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
+import { changeEditMode } from '@/src/features/learning-path/learningPathSlice';
 import React, { useEffect } from 'react';
 import InitialSection from './InitialSection';
 import LearningPathCourseCard from '@/src/shared/components/Card/LearningPathCourseCard';

@@ -2,10 +2,14 @@ import React, { useEffect } from 'react';
 import Courses from './Courses';
 import Button from '@/src/shared/components/Button';
 import PlusIcon from '@/src/shared/icons/PlusIcon';
-import { useAppDispatch, useAppSelector } from '@/app/hooks';
-import { closeModal, courseModalEnum, openModal } from '@/features/learning-path/courseModalsSlice';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
+import {
+  closeModal,
+  courseModalEnum,
+  openModal,
+} from '@/src/features/learning-path/courseModalsSlice';
 import CourseModal from './CourseModal';
-import { changeEditMode, deleteCourse } from '@/features/learning-path/learningPathSlice';
+import { changeEditMode, deleteCourse } from '@/src/features/learning-path/learningPathSlice';
 import DeleteModal from '@/src/shared/components/Modal/DeleteModal';
 
 const AddCourseSection = (): JSX.Element => {

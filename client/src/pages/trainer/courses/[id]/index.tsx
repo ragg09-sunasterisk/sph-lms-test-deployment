@@ -1,4 +1,4 @@
-import { useGetCourseQuery } from '@/services/courseAPI';
+import { useGetCourseQuery } from '@/src/services/courseAPI';
 import ContentSection from '@/src/sections/courses/ContentSection';
 import SettingsSection from '@/src/sections/courses/SettingsSection';
 import EditSettingsButton from '@/src/sections/courses/SettingsSection/EditSettingsButton';
@@ -9,8 +9,8 @@ import Tab from '@/src/shared/components/Tabs/Tab';
 import Container from '@/src/shared/layouts/Container';
 import { useRouter } from 'next/router';
 import { Fragment, useEffect } from 'react';
-import { useAppDispatch } from '@/app/hooks';
-import { reset } from '@/features/course/courseSlice';
+import { useAppDispatch } from '@/src/redux/hooks';
+import { reset } from '@/src/features/course/courseSlice';
 
 const CourseContent: React.FC = () => {
   const { query } = useRouter();

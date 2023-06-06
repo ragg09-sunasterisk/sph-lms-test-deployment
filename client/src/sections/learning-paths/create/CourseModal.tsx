@@ -7,8 +7,8 @@ import { useForm } from 'react-hook-form';
 import { ListItem } from '@/src/shared/components/Table/ListItem';
 import Pagination from '@/src/shared/components/Pagination';
 import Button from '@/src/shared/components/Button';
-import { useAppDispatch, useAppSelector } from '@/app/hooks';
-import { updateForm } from '@/features/learning-path/learningPathSlice';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
+import { updateForm } from '@/src/features/learning-path/learningPathSlice';
 import { type Course } from '../../../shared/utils/interface';
 
 enum HeaderEnum {
@@ -98,7 +98,7 @@ const CourseModal = ({
         <div className="p-4">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-4">
-              <SearchBar placeholder='Search' onSearchEvent={() => {}} />
+              <SearchBar placeholder="Search" onSearchEvent={() => {}} />
             </div>
             <Table
               checkbox={false}

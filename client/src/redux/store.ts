@@ -1,5 +1,5 @@
-import { getCourse } from '@/services/courseAPI';
-import { getCourseTrainee } from '@/services/traineeAPI';
+import { getCourse } from '@/src/services/courseAPI';
+import { getCourseTrainee } from '@/src/services/traineeAPI';
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import counterReducer from '../features/counter/counterSlice';
@@ -10,7 +10,7 @@ import lessonModalsReducer from '../features/course/lessonModalsSlice';
 import stepperReducer from '../features/stepper/stepperSlice';
 import tabReducer from '../features/tab/tabSlice';
 import learnerReducer from '../features/course/learnerSlice';
-import { getCategory } from '@/services/categoryAPI';
+import { getCategory } from '@/src/services/categoryAPI';
 
 export const store = configureStore({
   reducer: {
@@ -28,7 +28,7 @@ export const store = configureStore({
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      serializableCheck: false
+      serializableCheck: false,
     })
       .concat(getCourse.middleware)
       .concat(getCourseTrainee.middleware)

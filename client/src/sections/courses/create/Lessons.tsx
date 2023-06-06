@@ -1,8 +1,8 @@
 /* eslint-disable multiline-ternary */
 import { type FC } from 'react';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
-import { useAppDispatch, useAppSelector } from '@/app/hooks';
-import { reorderLessons } from '@/features/course/courseSlice';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
+import { reorderLessons } from '@/src/features/course/courseSlice';
 import { useStrictDroppable } from '@/src/shared/hooks/useStrictDroppable';
 import LessonItem from './LessonItem';
 

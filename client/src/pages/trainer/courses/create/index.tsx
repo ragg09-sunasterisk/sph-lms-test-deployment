@@ -4,16 +4,16 @@ import { useForm } from 'react-hook-form';
 import Breadcrumbs from '@/src/shared/components/Breadcrumbs';
 import Container from '@/src/shared/layouts/Container';
 import { courseSchema } from '@/src/shared/utils/validationSchemas';
-import { useAppDispatch, useAppSelector } from '@/app/hooks';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import Stepper from '@/src/shared/components/Stepper';
 import Step from '@/src/shared/components/Stepper/Step';
 import InitialSection from '@/src/sections/courses/create/InitialSection';
 import AddLessonSection from '@/src/sections/courses/create/AddLessonSection';
 import PreviewSection from '@/src/sections/courses/create/PreviewSection';
-import { setIsStepValid } from '@/features/stepper/stepperSlice';
+import { setIsStepValid } from '@/src/features/stepper/stepperSlice';
 import { useRouter } from 'next/router';
-import { reset } from '@/features/course/courseSlice';
-import { useCreateCourseMutation } from '@/services/courseAPI';
+import { reset } from '@/src/features/course/courseSlice';
+import { useCreateCourseMutation } from '@/src/services/courseAPI';
 import { alertError, alertSuccess } from '@/src/shared/utils/toastify';
 
 const Create: FC = () => {

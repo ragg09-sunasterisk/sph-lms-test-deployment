@@ -1,5 +1,5 @@
-import { useAppDispatch, useAppSelector } from '@/app/hooks';
-import { lessonModalEnum, openModal } from '@/features/course/lessonModalsSlice';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
+import { lessonModalEnum, openModal } from '@/src/features/course/lessonModalsSlice';
 import EditIcon from '@/src/shared/icons/EditIcon';
 import FourDotsIcon from '@/src/shared/icons/FourDotsIcon';
 import TrashIcon from '@/src/shared/icons/TrashIcon';
