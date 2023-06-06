@@ -33,7 +33,7 @@ export const store = configureStore({
       .concat(getCourse.middleware)
       .concat(getCourseTrainee.middleware)
       .concat(getCategory.middleware),
-  devTools: process.env.NODE_ENV !== 'production',
+  // devTools: process.env.NODE_ENV !== 'production',
 });
 
 setupListeners(store.dispatch);
