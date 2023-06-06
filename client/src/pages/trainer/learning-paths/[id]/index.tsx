@@ -4,6 +4,7 @@ import Tab from '@/src/shared/components/Tabs/Tab';
 import Container from '@/src/shared/layouts/Container';
 import { Fragment } from 'react';
 import LearningPathLearnersSection from '@/src/sections/learning-paths/LearnersSection';
+import LearningPathContentSection from '@/src/sections/learning-paths/ContentSection';
 
 interface LearningPath {
   id: number;
@@ -37,7 +38,7 @@ const LearningPathContent: React.FC = () => {
           </div>
           <Tabs>
             <Tab title="Content">
-              <div>Learning Path Content</div>
+              <LearningPathContentSection />
             </Tab>
             <Tab title="Learners">
               <LearningPathLearnersSection />

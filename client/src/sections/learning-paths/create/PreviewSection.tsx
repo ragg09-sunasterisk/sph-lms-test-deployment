@@ -22,11 +22,7 @@ const PreviewSection = (): JSX.Element => {
         {courses.length &&
           courses.map((course, index) => (
             <div key={course.id} className="flex flex-col items-center">
-              <LearningPathCourseCard
-                courseTitle={course.name}
-                imgPath={course.img_path}
-                lessonsCount={5}
-              />
+              <LearningPathCourseCard course={course} />
               {index !== courses.length - 1 && <ChevronDown height={40} width={40} />}
             </div>
           ))}
