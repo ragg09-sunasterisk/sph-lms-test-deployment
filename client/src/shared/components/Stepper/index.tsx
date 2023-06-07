@@ -42,17 +42,12 @@ const Stepper: FC<StepperProps> = ({ title, contentClass = '', onNext, children 
     let step = 0;
     const childrenListObj: ChildElementObject = {};
     Children.map(children, (child) => {
-      if (
-        Object.hasOwnProperty.call(child.type, 'name') &&
-        Object.getOwnPropertyDescriptors(child.type).name?.value === 'Step'
-      ) {
-        childrenListObj[step] = {
-          id: step,
-          childContent: child,
-          ...child.props,
-        };
-        step++;
-      }
+      childrenListObj[step] = {
+        id: step,
+        childContent: child,
+        ...child.props,
+      };
+      step++;
     });
 
     setChildrenList(childrenListObj);
