@@ -11,6 +11,7 @@ import { useRouter } from 'next/router';
 import { Fragment, useEffect } from 'react';
 import { useAppDispatch } from '@/src/redux/hooks';
 import { reset } from '@/src/features/course/courseSlice';
+import TabTemp from '@/src/shared/components/TabTemp';
 
 const CourseContent: React.FC = () => {
   const { query } = useRouter();
@@ -35,8 +36,27 @@ const CourseContent: React.FC = () => {
     }
   }, [course]);
 
+  const tabs = [
+    {
+      name: 'Tab 1',
+      content: <ContentSection course={course} />
+    },
+    {
+      name: 'Tab 2',
+      content: <LearningSection />
+    },
+    {
+      name: 'Tab 3',
+      content: <SettingsSection />
+    }
+  ];
+
   return (
     <Fragment>
+      <div className="ml-5 mt-5 border border-2">
+         <TabTemp tabs={tabs} />
+      </div>
+
       <div className="ml-5 mt-5">
         <Breadcrumbs paths={paths} />
         <Container className="px-28">
