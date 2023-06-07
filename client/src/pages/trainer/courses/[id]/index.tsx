@@ -38,15 +38,15 @@ const CourseContent: React.FC = () => {
 
   const tabs = [
     {
-      name: 'Tab 1',
+      name: 'Content',
       content: <ContentSection course={course} />
     },
     {
-      name: 'Tab 2',
+      name: 'Learners',
       content: <LearningSection />
     },
     {
-      name: 'Tab 3',
+      name: 'Settings',
       content: <SettingsSection />
     }
   ];
