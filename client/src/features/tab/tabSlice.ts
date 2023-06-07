@@ -7,7 +7,7 @@ export interface TabState {
 }
 
 const initialState: TabState = {
-  activeTab: 0,
+  activeTab: 1,
   isTabValid: true,
 };
 
