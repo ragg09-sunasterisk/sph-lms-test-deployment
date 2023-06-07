@@ -1,7 +1,8 @@
+/* eslint-disable array-callback-return */
 /* eslint-disable @typescript-eslint/consistent-indexed-object-style */
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import { setActiveTab } from '@/src/features/tab/tabSlice';
-import { Children, Fragment, useEffect, useState, type FC, type ReactElement } from 'react';
+import { Fragment, useEffect, useState, type FC, type ReactElement } from 'react';
 import { type ChildElementObject } from '../../utils/interface';
 import { type TabProps } from './Tab';
 
@@ -17,8 +18,9 @@ const Tabs: FC<TabsProps> = ({ children }) => {
   useEffect(() => {
     let tab = 0;
     const childrenListObj: ChildElementObject = {};
+    const childrenArr = children instanceof Array ? children : Array(children);
 
-    Children.map(children, (child) => {
+    childrenArr.map((child) => {
       if (
         Object.hasOwnProperty.call(child.type, 'name') &&
         Object.getOwnPropertyDescriptors(child.type).name?.value === 'Tab'
