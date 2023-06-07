@@ -21,17 +21,12 @@ const Tabs: FC<TabsProps> = ({ children }) => {
     const childrenArr = children instanceof Array ? children : Array(children);
 
     childrenArr.map((child) => {
-      if (
-        Object.hasOwnProperty.call(child.type, 'name') &&
-        Object.getOwnPropertyDescriptors(child.type).name?.value === 'Tab'
-      ) {
-        childrenListObj[tab] = {
-          id: tab,
-          title: child.props.title,
-          childContent: child,
-        };
-        tab++;
-      }
+      childrenListObj[tab] = {
+        id: tab,
+        title: child.props.title,
+        childContent: child,
+      };
+      tab++;
     });
 
     setChildrenList(childrenListObj);
